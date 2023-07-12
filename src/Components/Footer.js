@@ -115,8 +115,9 @@ function Footer() {
     return (
         <footer>
             <nav>
-                <HStack>
-                <VStack>
+                <HStack spacing={100}>
+                <img src="../images/logo2.png" alt="Little Lemon Logo" />
+                <VStack spacing={4}>
                 {navigation.map((navigation) => (
                 <a key={navigation.index} href={navigation.href}>
                     {navigation.label}
@@ -126,19 +127,19 @@ function Footer() {
                     {contact.map((contact) =>(
                         <a key={contact.index} href={contact.url}>
                             <HStack>
-                            <FontAwesomeIcon icon={contact.icon} size="0.5x" />
+                            <FontAwesomeIcon icon={contact.icon} size="1x" />
                            <a>{contact.label}</a>
                            </HStack>
                         </a>
                     ))}
                 </VStack>
-                <VStack spacing={4}>
+                <VStack spacing={6}>
                 {socials.map((social, index) => (
                 <a key={social.index} href={social.url}>
-                    <FontAwesomeIcon icon={social.icon} size="0.5x" />
+                    <FontAwesomeIcon icon={social.icon} size="1x" />
                 </a>))};
                 </VStack>
-                <VStack>
+                <VStack spacing={2}>
                 {hours.map((hour) => (
                 <div key={hour.day}>
                     <a>{hour.day}: {hour.openHours}</a>
