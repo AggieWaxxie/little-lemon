@@ -1,9 +1,10 @@
- import React, { useEffect, useRef, useState } from "react";
-import { Box, HStack } from "@chakra-ui/react";
-import logo3 from '../images/logo3.png';
+import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Box, HStack } from '@chakra-ui/react';
+import logo3 from 'C:/Users/Aggiey Ness/Projects/little-lemon-web-app/src/images/logo3.png';
 
 const Header = () => {
-        const handleClick = (anchor) => (e) => {
+        /**const handleClick = (anchor) => (e) => {
           e.prventDefault ();
           const id = `${anchor}-section`;
           const element = document.getElementById(id);
@@ -13,7 +14,7 @@ const Header = () => {
               block: "start",
             });
           }
-        };
+        };**/
           const [isHeaderVisible, setIsHeaderVisible] = useState(true);
           const prevScrollY = useRef(0);
       
@@ -51,18 +52,18 @@ const Header = () => {
                 position='fixed'>
             <nav>
             <HStack spacing={85}>
-                <a href="/">
+                <Link to="/">
                 <img src={logo3}
                 alt="Little Lemon Logo"
                 width='200rem'
                 height='auto' />
-                </a>
-                <a href="/">Home</a>
-                <a href="/about">About</a>
-                <a href="/menu">Menu</a>
-                <a href="/reservations">Reservations</a>
-                <a href="/orderonline">Order Online</a>
-                <a href="/login">Login</a>
+                </Link>
+                <Link to="/">Home</Link>
+                <Link to="/aboutPage">About</Link>
+                <Link to="/menuPage">Menu</Link>
+                <Link to="/reservationsPage">Reservations</Link>
+                <Link to="/orderOnlinePage">Order Online</Link>
+                <Link to="/loginPage">Login</Link>
             </HStack>
             </nav>
             </Box>

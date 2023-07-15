@@ -1,3 +1,8 @@
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace, 'Markezi text';
+}
+
 body {
   display: grid;
   column-count: 12px;
@@ -11,10 +16,78 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
   width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace, 'Markezi text';
+/* HeroSection.css */
+.hero-section {
+  background-color: #495e57;
+  position: relative;
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  overflow: visible;
+  padding: 0px 40px 40px 0;
 }
+
+.text-content {
+  color: white;
+  text-align: left;
+  z-index: 1;
+  padding-top: 50px;
+  padding-left: 225px;
+}
+
+.hero-title {
+  font-family: 'markezi text', sans-serif;
+  color: #f4ce14;
+  font-size: 3rem;
+}
+
+.hero-subtitle {
+  font-family: 'markezi text', sans-serif;
+  color: white;
+  font-size: 2rem;
+}
+
+.hero-description {
+  font-family: 'Karla', sans-serif;
+  color: white;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  margin-top: 1rem;
+}
+
+.hero-image {
+  position: absolute;
+  align-items: right;
+  bottom: -60px; /* Adjust this value as needed */
+  right: 225px;
+  height: 100%;
+  width: auto; /* Adjust this value as needed */
+  z-index: 0;
+  border-radius: 16pt;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.reserve-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  color: black;
+  background-color: #f4ce14;
+  border-radius: 16px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+.reserve-button:hover {
+  background-color: #d5b50f;
+}
+

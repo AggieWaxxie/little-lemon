@@ -128,7 +128,7 @@ function Footer() {
                         <a key={contact.index} href={contact.url}>
                             <HStack>
                             <FontAwesomeIcon icon={contact.icon} size="1x" />
-                           <a>{contact.label}</a>
+                           <a href={contact.url}>{contact.label}</a>
                            </HStack>
                         </a>
                     ))}
@@ -142,7 +142,7 @@ function Footer() {
                 <VStack spacing={2}>
                 {hours.map((hour) => (
                 <div key={hour.day}>
-                    <a>{hour.day}: {hour.openHours}</a>
+                    <p>{hour.day}: {hour.openHours}</p>
                 </div>))}
                 </VStack>
 
